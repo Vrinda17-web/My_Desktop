@@ -25,7 +25,7 @@
         <p>
     <button id="saveNoteBtn">Save</button>
   </p>
-  
+
         </div>  
          <div class="widget"><h3>widget 2</h3></div>  
          <div class="widget"><h3>widget 3</h3></div>  
@@ -39,6 +39,18 @@
 </body>
 
 <script>
+
+
+try {
+ var loadNotes = localStorage.getItem("notes");
+}
+catch(err) {
+ var loadNotes = "Enter your notes here and click 'Save'";
+}
+$("#note-area").val(loadNotes);
+
+
+
 var today= newDate();
 var dd = today.getDate();
 var mm = today.getMonth() + 1;
@@ -49,6 +61,12 @@ if(mm<10) mm='0'+mm;
 
 $("#date").html(mm+sp+dd+sp+yyyy);
 
+
+
+$("#saveNoteBtn").click(function(){
+ var currentNotes = $("#note-area").val();
+ localStorage.setItem("notes", currentNotes);
+});
 </script>
 </html>
 
