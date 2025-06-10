@@ -16,10 +16,25 @@
             <div id="clock"></div>
         </div>
         <div class="main">
-         <div class="widget"><h3>widget 1</h3></div>  
+         <div class="widget"><h3>widget 1</h3>
+        <div class="notepad">
+
+    <textarea id="note-area" name="message" rows="20" cols="40"></textarea>
+  </div>
+        
+        <p>
+    <button id="saveNoteBtn">Save</button>
+  </p>
+  
+        </div>  
          <div class="widget"><h3>widget 2</h3></div>  
          <div class="widget"><h3>widget 3</h3></div>  
         </div>
+    </div>
+
+    
+
+
     </div>
 </body>
 
@@ -33,6 +48,7 @@ if(dd<10) dd='0'+dd;
 if(mm<10) mm='0'+mm;
 
 $("#date").html(mm+sp+dd+sp+yyyy);
+
 </script>
 </html>
 
